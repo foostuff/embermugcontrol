@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ember Mug Control</title>
+  <link rel="stylesheet" href="mug.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <button id="connect">📶Connect</button>
+  <button id="disconnect" style="display:none">🚫Disconnect</button>
+  <div id="muginterface">
+    <div id="connectionlost">
+      <div id="connectionlosttext">not connected</div>
+    </div>
+    <div class="mugname">
+      <span contentEditable=true id="mugname">Not connected</span> <input id="updatename" style="display:none"
+             type=button
+             value="update">
+    </div>
+    <div class="mug">
+      <div id="bat">99%</div>
+      <div class="coffee">
+        <div id="fill">
+          <div id="filltext">?</div>
+        </div>
+      </div>
+      <div id="lcolor">
+        <input type="color" id="lightcolor" value="#ff0000" onchange="updatelight()">
+      </div>
+    </div>
+    <div id="meterbg">
+      <div id="meterhandle">
+        <div id="midlabel"><span id="targettemperature" contentEditable=true>??</span>°C <input id="updatetarget"
+                 style="display:none"
+                 type=button
+                 value="update"></div>
+      </div>
+      <div id="meterfg">
+        <div id="meterlabel">???</div>
+      </div>
+      <div id="leftlabel">20°C</div>
+      <div id="rightlabel">100°C</div>
+    </div>
+  </div>
+
+
+  <br>
+  <div id="log"></div>
+
+  <script src="mug.js"></script>
+</body>
+
+</html>
